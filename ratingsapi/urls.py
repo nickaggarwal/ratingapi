@@ -1,4 +1,4 @@
-"""leadsapi URL Configuration
+"""ratingsapi URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from restapi.views import LeadsViewSet, index
+from restapi.views import ProductsViewSet, index
 
 
 router = DefaultRouter()
-router.register(r'leads', LeadsViewSet, base_name='user')
+router.register(r'products', ProductsViewSet, base_name='user')
 
 
 urlpatterns = [

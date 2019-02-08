@@ -1,12 +1,8 @@
-from enumchoicefield.admin import EnumListFilter
 from rest_framework import serializers
-from restapi.models import Lead
+from restapi.models import Product
 
 
-class LeadSerializer(serializers.ModelSerializer):
+class ProductSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Lead
+        model = Product
         fields = '__all__'
-        list_filter = [
-            ('location_type', EnumListFilter),('status', EnumListFilter)
-        ]
